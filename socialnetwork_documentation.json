@@ -1,0 +1,1039 @@
+{
+	"info": {
+		"_postman_id": "705b3703-ce70-43d5-bf80-ba5f52406d5a",
+		"name": "NO-SQL- POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22445470",
+		"_collection_link": "https://techosto.postman.co/workspace/Development~62451ddc-c385-4d17-94eb-5e9d3ad37355/collection/22445470-705b3703-ce70-43d5-bf80-ba5f52406d5a?action=share&source=collection_link&creator=22445470"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"kavin@gmail.com\",\n    \"password\": \"Kavin@123\",\n    \"fullName\": \"Shubham\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"shubham@gmail.com\",\n    \"password\": \"123456\",\n    \"fullName\": \"Kavin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "347"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15b-IKQyI2vY14PDLMlzsFgMkvOAVzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 14:09:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"userId\": \"65635195e0ca248e1f38dfa6\",\n        \"fullName\": \"Kavin\",\n        \"email\": \"shubham@gmail.com\",\n        \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYzNTE5NWUwY2EyNDhlMWYzOGRmYTYiLCJmdWxsTmFtZSI6IkthdmluIiwiZW1haWwiOiJzaHViaGFtQGdtYWlsLmNvbSIsImlhdCI6MTcwMTAwNzc2NSwiZXhwIjoxNzAzNTk5NzY1fQ.yDfmP3r1gQGahBAU_mLozevCJDsqhiiHh9g472LjLak\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"shubham@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"shubham@gmail.com\",\n    \"password\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "347"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15b-FxC791Yn0qBv9fpWcyTko1N6oFo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 19:07:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"userId\": \"65635195e0ca248e1f38dfa6\",\n        \"fullName\": \"Kavin\",\n        \"email\": \"shubham@gmail.com\",\n        \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYzNTE5NWUwY2EyNDhlMWYzOGRmYTYiLCJmdWxsTmFtZSI6IkthdmluIiwiZW1haWwiOiJzaHViaGFtQGdtYWlsLmNvbSIsImlhdCI6MTcwMTAyNTY0OSwiZXhwIjoxNzAzNjE3NjQ5fQ.vyMH7IUtEMmsllepziKaIzV814poTUYcgIw9v4DMSwE\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"add\",\n    \"friends\": [\"6563979442eb5167bdc219fc\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/addRemoveFriend",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"addRemoveFriend"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Friend",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"add\",\n    \"friends\": [\"6563979442eb5167bdc219fc\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/addRemoveFriend",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"addRemoveFriend"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-OGs6Gy1OQDtRgvdN9t3ssHf51JM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 19:20:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"65635195e0ca248e1f38dfa6\",\n        \"email\": \"shubham@gmail.com\",\n        \"fullName\": \"Kavin\",\n        \"password\": \"$2a$10$8lClu8C1ZZ9EMVC/05FvHuq3zv4V8H47q6C0sP4xLzlzxq/v5Ffke\",\n        \"createdAt\": \"2023-11-26T14:09:25.743Z\",\n        \"updatedAt\": \"2023-11-26T19:19:42.330Z\",\n        \"__v\": 0,\n        \"friends\": [\n            \"6563979442eb5167bdc219fc\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"remove\",\n    \"friends\": [\"6563979442eb5167bdc219fc\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/addRemoveFriend",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"addRemoveFriend"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove Friend",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"remove\",\n    \"friends\": [\"6563979442eb5167bdc219fc\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/addRemoveFriend",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"addRemoveFriend"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "263"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"107-p9zvecMvzwt5irTo+tWWM4+hZUE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 19:23:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"65635195e0ca248e1f38dfa6\",\n        \"email\": \"shubham@gmail.com\",\n        \"fullName\": \"Kavin\",\n        \"password\": \"$2a$10$8lClu8C1ZZ9EMVC/05FvHuq3zv4V8H47q6C0sP4xLzlzxq/v5Ffke\",\n        \"createdAt\": \"2023-11-26T14:09:25.743Z\",\n        \"updatedAt\": \"2023-11-26T19:23:07.163Z\",\n        \"__v\": 0,\n        \"friends\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Thoughts",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"imageUrl\": \"some.image.url2.jpeg\",\n    \"description\": \"some 2 description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/thought",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"thought"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imageUrl\": \"some.image.url.jpeg\",\n    \"description\": \"some description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/thought",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"thought"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f5-09jA8sE9FThfFsp+aFuQ8lNE7fs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 15:19:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"userId\": \"65635195e0ca248e1f38dfa6\",\n        \"imageUrl\": \"some.image.url.jpeg\",\n        \"description\": \"some description\",\n        \"active\": true,\n        \"_id\": \"656361fea0fc2dfc46124382\",\n        \"createdAt\": \"2023-11-26T15:19:26.201Z\",\n        \"updatedAt\": \"2023-11-26T15:19:26.201Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/thought?pageNo=1&pageSize=10&userId=65635195e0ca248e1f38dfa6&reaction=laugh",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"thought"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "userId",
+									"value": "65635195e0ca248e1f38dfa6"
+								},
+								{
+									"key": "description",
+									"value": "some",
+									"disabled": true
+								},
+								{
+									"key": "reaction",
+									"value": "laugh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"dneriufb uibde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/thought/656361e96f990d0343990165",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"thought",
+								"656361e96f990d0343990165"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"dneriufb uibde\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/thought/656361e96f990d0343990165",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"thought",
+										"656361e96f990d0343990165"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-6W6UJ+8L8X8g9CR49rHpXVA/0AQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 15:38:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"656361e96f990d0343990165\",\n        \"userId\": \"65635195e0ca248e1f38dfa6\",\n        \"imageUrl\": \"some.image.url.jpeg\",\n        \"description\": \"dneriufb uibde\",\n        \"active\": true,\n        \"createdAt\": \"2023-11-26T15:19:05.152Z\",\n        \"updatedAt\": \"2023-11-26T15:38:30.477Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/thought/656361fea0fc2dfc46124382",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"thought",
+								"656361fea0fc2dfc46124382"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/thought/656361fea0fc2dfc46124382",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"thought",
+										"656361fea0fc2dfc46124382"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-y9G+NMS+1QF9p9F2n1Rxuq/7cDI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 15:42:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"656361fea0fc2dfc46124382\",\n        \"userId\": \"65635195e0ca248e1f38dfa6\",\n        \"imageUrl\": \"some.image.url.jpeg\",\n        \"description\": \"some description\",\n        \"active\": false,\n        \"createdAt\": \"2023-11-26T15:19:26.201Z\",\n        \"updatedAt\": \"2023-11-26T15:42:08.859Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"thoughtId\" : \"656361e96f990d0343990165\",\n    \"reactionType\": \"heart\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/like",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"like"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"thoughtId\" : \"656361e96f990d0343990165\",\n    \"reactionType\": \"heart\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/like",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"like"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-ZDQWjgGJjZrbTma2SltyLZe7zzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 16:17:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"likedBy\": \"65635195e0ca248e1f38dfa6\",\n        \"thoughtId\": \"656361e96f990d0343990165\",\n        \"reactionType\": \"heart\",\n        \"_id\": \"65636f901c99be62fe97a5e3\",\n        \"createdAt\": \"2023-11-26T16:17:20.101Z\",\n        \"updatedAt\": \"2023-11-26T16:17:20.101Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/like?likedBy=65635195e0ca248e1f38dfa6",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"like"
+									],
+									"query": [
+										{
+											"key": "likedBy",
+											"value": "65635195e0ca248e1f38dfa6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-yItHvHHs5vXcJSEb90PGxsBSWwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 16:22:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"656370428df02f661a665031\",\n            \"likedBy\": \"65635195e0ca248e1f38dfa6\",\n            \"thoughtId\": \"656361e96f990d0343990165\",\n            \"reactionType\": \"sad\",\n            \"active\": true,\n            \"createdAt\": \"2023-11-26T16:20:18.758Z\",\n            \"updatedAt\": \"2023-11-26T16:20:18.758Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reactionType\": \"laugh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/like/65636f901c99be62fe97a5e3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"like",
+								"65636f901c99be62fe97a5e3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reactionType\": \"laugh\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/like/65636f901c99be62fe97a5e3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"like",
+										"65636f901c99be62fe97a5e3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-r619ze0A9Jbcul684UWhGk234L0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 16:26:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"active\": true,\n        \"_id\": \"65636f901c99be62fe97a5e3\",\n        \"likedBy\": \"65635195e0ca248e1f38dfa6\",\n        \"thoughtId\": \"656361e96f990d0343990165\",\n        \"reactionType\": \"laugh\",\n        \"createdAt\": \"2023-11-26T16:17:20.101Z\",\n        \"updatedAt\": \"2023-11-26T16:26:18.237Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3004/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "userToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTYzNTE5NWUwY2EyNDhlMWYzOGRmYTYiLCJmdWxsTmFtZSI6IkthdmluIiwiZW1haWwiOiJzaHViaGFtQGdtYWlsLmNvbSIsImlhdCI6MTcwMTAwNzc2NSwiZXhwIjoxNzAzNTk5NzY1fQ.yDfmP3r1gQGahBAU_mLozevCJDsqhiiHh9g472LjLak",
+			"type": "string"
+		}
+	]
+}
